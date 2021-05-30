@@ -361,10 +361,10 @@
          ' fa fa-tree';
             L.Control.Watermark2=L.Control.extend({
             onAdd:function(map){
-                var img2 = L.DomUtil.create('img2');
-                img2.src = 'riau.png';
-                img2.style.width = '50px';
-                return img2;
+                var img = L.DomUtil.create('img');
+                img.src = 'riau.png';
+                img.style.width = '50px';
+                return img;
             },
             onRemove:function(map){},
         })
