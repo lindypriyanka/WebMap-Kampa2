@@ -359,6 +359,19 @@
             minLength: 1}));
         document1.getElementsByClassName('search-button')[0].className +=
          ' fa fa-tree';
+            L.Control.Watermark2=L.Control.extend({
+            onAdd:function(map){
+                var img2 = L.DomUtil.create('img2');
+                img2.src = 'riau.png';
+                img2.style.width = '50px';
+                return img2;
+            },
+            onRemove:function(map){},
+        })
+        L.control.watermark2 = function(opts){
+            return new L.Control.Watermark2(opts);
+        }
+        L.control.watermark2({position:'bottomright'}).addTo(map);
         </script>
     </body>
 </html>
