@@ -359,19 +359,18 @@
             minLength: 1}));
         document1.getElementsByClassName('search-button')[0].className +=
          ' fa fa-tree';
-            L.Control.Watermark2=L.Control.extend({
+        L.Control.Riau=L.Control.extend({
             onAdd:function(map){
                 var img = L.DomUtil.create('img');
                 img.src = 'riau.png';
-                img.style.width = '50px';
+                img.style.width = '150px';
                 return img;
             },
             onRemove:function(map){},
         })
-        L.control.watermark2 = function(opts){
-            return new L.Control.Watermark2(opts);
+        L.control.riau = function(opts){
+            return new L.Control.Riau(opts);
         }
-        L.control.watermark2({position:'bottomright'}).addTo(map);
         </script>
     </body>
 </html>
