@@ -20,7 +20,7 @@
             padding: 0;
             margin: 0;
         }
-            .leaflet-popup-content > table img {
+        .leaflet-popup-content > table img {
     width: 150px;
    }
         </style>
@@ -350,15 +350,6 @@
             return new L.Control.Watermark(opts);
         }
         L.control.watermark({position:'bottomright'}).addTo(map);
-        map.addControl(new L.Control.Search({
-            layer: cluster_PohonAdopsi_3,
-            initial: false,
-            hideMarkerOnCollapse: true,
-            propertyName: 'nama_lokal',
-            textPlaceholder: 'Cari berdasarkan nama pohon',
-            minLength: 1}));
-        document1.getElementsByClassName('search-button')[0].className +=
-         ' fa fa-tree';
         L.Control.Riau=L.Control.extend({
             onAdd:function(map){
                 var img = L.DomUtil.create('img');
@@ -371,6 +362,17 @@
         L.control.riau = function(opts){
             return new L.Control.Riau(opts);
         }
+        L.control.riau({position:'bottomright'}).addTo(map)
+        map.addControl(new L.Control.Search({
+            layer: cluster_PohonAdopsi_3,
+            initial: false,
+            hideMarkerOnCollapse: true,
+            propertyName: 'nama_lokal',
+            textPlaceholder: 'Cari berdasarkan nama pohon',
+            minLength: 1}));
+        document1.getElementsByClassName('search-button')[0].className +=
+         ' fa fa-tree';
+          
         </script>
     </body>
 </html>
