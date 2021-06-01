@@ -248,7 +248,7 @@
                         <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxWidth: 400});
+            layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
         function style_PohonAdopsi_3_0(feature) {
